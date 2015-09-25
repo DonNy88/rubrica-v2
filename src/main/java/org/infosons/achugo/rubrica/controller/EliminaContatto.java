@@ -44,7 +44,7 @@ public class EliminaContatto {
 	}
 
 	/**
-	 * Elimina tutte le informazioni relative {@code contattoDaCancellare}
+	 * Elimina tutte le informazioni relative {@code contattoDaCancellare}.
 	 * 
 	 * @param contattoDaCancellare
 	 * @throws FileNotFoundException
