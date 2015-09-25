@@ -96,25 +96,4 @@ public class GestioneUtente {
 			f.createNewFile();
 		}
 	}
-
-	public static void main(String[] args) {
-		GestioneUtente gu = new GestioneUtente();
-
-		try {
-			gu.salvaUtente(new Utente("user", "password"));
-		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-
-		try {
-			Utente utenteRecuperato = gu.recuperaUtente();
-			System.out.println(utenteRecuperato);
-		} catch (FileNotFoundException | NoSuchElementException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
 }

@@ -59,35 +59,4 @@ public class Login {
 
 		return u.getUsername().equalsIgnoreCase(username) && u.getPassword().equals(password);
 	}
-
-	public static void main(String[] arg) {
-		Login l = Login.getInstance();
-		GestioneUtente gu = new GestioneUtente();
-
-		try {
-			gu.salvaUtente(new Utente("user", "password"));
-		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-
-		try {
-			Utente utenteRecuperato = gu.recuperaUtente();
-			System.out.println(utenteRecuperato);
-		} catch (FileNotFoundException | NoSuchElementException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		try {
-			System.out.println(l.verifica("user", "password"));
-		} catch (FileNotFoundException | NoSuchElementException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
 }
