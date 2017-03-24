@@ -33,10 +33,14 @@ public class SomeFieldsIsEmpty extends IOException {
 	}
 	
 	public SomeFieldsIsEmpty(String type) {
-		this.type = type;
+		setType(type);
 	}
 
 	public String getType() {
 		return type;
+	}
+	
+	private void setType(String type) {
+		this.type = type;
 	}
 }
