@@ -29,7 +29,11 @@ public class SomeFieldsIsEmpty extends IOException {
 	private String type;
 	
 	public SomeFieldsIsEmpty() {
-		type = getClass().getSimpleName();
+		this(getClass().getSimpleName());
+	}
+	
+	public SomeFieldsIsEmpty(String type) {
+		this.type = type;
 	}
 
 	public String getType() {
