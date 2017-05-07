@@ -32,7 +32,7 @@ import org.infosons.achugo.rubrica.model.Utente;
 /**
  * @author Achugo Donald Emeka
  *
- * @version 2015.09.20.v1
+ * @version 2017.05.07.v1
  */
 public class GestioneUtente {
 
@@ -68,18 +68,13 @@ public class GestioneUtente {
 		}
 		String[] campiUtente = s.nextLine().split("\\;");
 		s.close();
-
 		return new Utente(campiUtente[0], campiUtente[1]);
 	}
 
 	private void creaFileCredezialiStandard() throws IOException {
 		String testo = "user;password";
 		File fout = new File(nomeFile);
-		
-		System.out.println("Ciao bello moio");
-
 		creaFileSeNonEsiste(fout);
-
 		PrintStream p = new PrintStream(new BufferedOutputStream(new FileOutputStream(fout, true)));
 		p.println(testo);
 		p.close();

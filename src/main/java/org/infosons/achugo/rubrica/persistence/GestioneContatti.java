@@ -128,10 +128,10 @@ public class GestioneContatti {
 		File cartella = new File(CARTELLA_FILE);
 
 		if (!listaVuoto(cartella)) {
-			ArrayList<Persona> risultato = new ArrayList<Persona>();
+			List<Persona> risultato = new ArrayList<Persona>();
 
 			for (final File fileEntry : cartella.listFiles()) {
-				ArrayList<Persona> tmp = new ArrayList<Persona>();
+				List<Persona> tmp = new ArrayList<Persona>();
 				for (String s : Files.readAllLines(fileEntry.toPath(), Charset.defaultCharset())) {
 					String[] campiContatto = s.split("\\;");
 					tmp.add(new Persona(campiContatto[0], campiContatto[1], campiContatto[2], campiContatto[3], Integer.parseInt(campiContatto[4])));
