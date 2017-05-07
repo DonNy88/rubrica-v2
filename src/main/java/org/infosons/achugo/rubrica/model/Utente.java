@@ -21,10 +21,10 @@ package org.infosons.achugo.rubrica.model;
  *
  * @version 2015.09.22.v2
  */
-public class Utente {
+public class Utente  {
 
 	private String username;
-	private String password;
+	private String password;//fff
 
 	/**
 	 * @param username
